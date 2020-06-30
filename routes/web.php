@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/{id}', function ($id) {
-    return 'Bienvenido User: ' . $id;
+Route::get('user/{name?}', function ($name=null) {
+    return 'Bienvenido: ' . $name;
 });
