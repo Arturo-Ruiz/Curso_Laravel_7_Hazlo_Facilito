@@ -15,9 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-//Ruta Con Variable Que No Puede Existir , Ejem si no existe Nombre aun asi se muestra Bienvenido
-Route::get('user/{name?}', function ($name=null) {
-    return 'Bienvenido: ' . $name;
-});
+Route::get('user/{id}', 'UserController@show');
